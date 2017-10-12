@@ -1,0 +1,12 @@
+<h1>Show Page</h1>
+
+<h2><%= @recipe.name %></h2>
+<ul>
+  <li><%= @recipe.ingredients %></li>
+  <li><%= @recipe.cook_time %></li>
+</ul>
+
+<form action="/recipes/<%= @recipe.id %>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" name="delete" value="delete">
+</form>
